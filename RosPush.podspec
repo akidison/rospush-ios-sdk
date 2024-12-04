@@ -21,6 +21,8 @@ Pod::Spec.new do |s|
   s.xcconfig = { 'OTHER_LDFLAGS' => '-ObjC' }
   s.ios.deployment_target = "13.0"
 
+  s.swift_versions = ['5.0']
+
   s.dependency 'AppMetricaAnalytics', '~> 5.8.2'
 
   s.source_files = 'RosPush/**/*.{h,m,swift}'
