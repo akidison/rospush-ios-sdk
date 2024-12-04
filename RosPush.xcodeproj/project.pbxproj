@@ -7,14 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		844CBC10300BD3E434631083 /* Pods_RosPush.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BEA830BCA9E7F29072D6617 /* Pods_RosPush.framework */; };
+		44C8DC4C2D00DEC80021CCC6 /* PushwooshFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44C8DC4A2D00DEB20021CCC6 /* PushwooshFramework.framework */; platformFilter = ios; };
+		44C8DC4D2D00DEC80021CCC6 /* PushwooshFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 44C8DC4A2D00DEB20021CCC6 /* PushwooshFramework.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		4CCFCB1C39CE123B3CBF7ED8 /* Pods_RosPush.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84C49E3812C7C307974F16F9 /* Pods_RosPush.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		44C8DC392D00D2130021CCC6 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				44C8DC4D2D00DEC80021CCC6 /* PushwooshFramework.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		44C8DA6D2D007B8E0021CCC6 /* RosPush.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RosPush.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		45A37250B528F49B852122B9 /* Pods-RosPush.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RosPush.release.xcconfig"; path = "Target Support Files/Pods-RosPush/Pods-RosPush.release.xcconfig"; sourceTree = "<group>"; };
-		8BEA830BCA9E7F29072D6617 /* Pods_RosPush.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RosPush.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		AD40EBBEF07F3044CAF7E6ED /* Pods-RosPush.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RosPush.debug.xcconfig"; path = "Target Support Files/Pods-RosPush/Pods-RosPush.debug.xcconfig"; sourceTree = "<group>"; };
+		44C8DC4A2D00DEB20021CCC6 /* PushwooshFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PushwooshFramework.framework; path = Frameworks/PushwooshFramework.framework; sourceTree = "<group>"; };
+		5E59A53F2B66DD7D07A90EAF /* Pods-RosPush.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RosPush.release.xcconfig"; path = "Target Support Files/Pods-RosPush/Pods-RosPush.release.xcconfig"; sourceTree = "<group>"; };
+		5FCA8DAFB948F7857F224849 /* Pods-RosPush.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RosPush.debug.xcconfig"; path = "Target Support Files/Pods-RosPush/Pods-RosPush.debug.xcconfig"; sourceTree = "<group>"; };
+		84C49E3812C7C307974F16F9 /* Pods_RosPush.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RosPush.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -44,7 +61,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				844CBC10300BD3E434631083 /* Pods_RosPush.framework in Frameworks */,
+				44C8DC4C2D00DEC80021CCC6 /* PushwooshFramework.framework in Frameworks */,
+				4CCFCB1C39CE123B3CBF7ED8 /* Pods_RosPush.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,8 +90,8 @@
 		594C2E4C8FBA21D41969DFDC /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				AD40EBBEF07F3044CAF7E6ED /* Pods-RosPush.debug.xcconfig */,
-				45A37250B528F49B852122B9 /* Pods-RosPush.release.xcconfig */,
+				5FCA8DAFB948F7857F224849 /* Pods-RosPush.debug.xcconfig */,
+				5E59A53F2B66DD7D07A90EAF /* Pods-RosPush.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -81,7 +99,8 @@
 		D4668B4642B46A4280897D39 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				8BEA830BCA9E7F29072D6617 /* Pods_RosPush.framework */,
+				44C8DC4A2D00DEB20021CCC6 /* PushwooshFramework.framework */,
+				84C49E3812C7C307974F16F9 /* Pods_RosPush.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -103,11 +122,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 44C8DA732D007B8E0021CCC6 /* Build configuration list for PBXNativeTarget "RosPush" */;
 			buildPhases = (
-				6DAC2C893609974E3FDFFDFD /* [CP] Check Pods Manifest.lock */,
+				544C77ACBAA7CDBDD094C732 /* [CP] Check Pods Manifest.lock */,
 				44C8DA682D007B8E0021CCC6 /* Headers */,
 				44C8DA692D007B8E0021CCC6 /* Sources */,
 				44C8DA6A2D007B8E0021CCC6 /* Frameworks */,
 				44C8DA6B2D007B8E0021CCC6 /* Resources */,
+				44C8DC392D00D2130021CCC6 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -165,7 +185,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		6DAC2C893609974E3FDFFDFD /* [CP] Check Pods Manifest.lock */ = {
+		544C77ACBAA7CDBDD094C732 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -202,7 +222,7 @@
 /* Begin XCBuildConfiguration section */
 		44C8DA742D007B8E0021CCC6 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AD40EBBEF07F3044CAF7E6ED /* Pods-RosPush.debug.xcconfig */;
+			baseConfigurationReference = 5FCA8DAFB948F7857F224849 /* Pods-RosPush.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -212,6 +232,11 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_MODULE_VERIFIER = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Frameworks",
+					"$(PROJECT_DIR)",
+				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
@@ -234,7 +259,7 @@
 		};
 		44C8DA752D007B8E0021CCC6 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 45A37250B528F49B852122B9 /* Pods-RosPush.release.xcconfig */;
+			baseConfigurationReference = 5E59A53F2B66DD7D07A90EAF /* Pods-RosPush.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -244,6 +269,11 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_MODULE_VERIFIER = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Frameworks",
+					"$(PROJECT_DIR)",
+				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
