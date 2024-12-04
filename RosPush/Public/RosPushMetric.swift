@@ -7,9 +7,11 @@
 
 import Foundation
 
+@objc
 public class RosPushMetric: NSObject {
     
-    public static func configure(with appKey: String) {
-        
+    @objc
+    public static func configure(with apiKey: String) {
+        RosPushInitialize.configure(with: apiKey)
     }
 }

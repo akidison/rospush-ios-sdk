@@ -4,35 +4,25 @@
 
 Pod::Spec.new do |s|
 
-  s.name         = "Pushwoosh"
-  s.version      = "6.7.11"
-  s.summary      = "Push notifications library by Pushwoosh."
+  s.name         = "RosPush"
+  s.version      = "1.0.0"
+  s.summary      = "Push notifications library by RosPush."
   s.platform     = :ios
 
-  s.description  = "Push notifications iOS library by Pushwoosh - cross platform push notifications service. " \
-                   "http://www.pushwoosh.com "
+  s.description  = "RosPush provide rospush-ios-sdk framework."
 
-  s.homepage     = "http://www.pushwoosh.com"
+  s.homepage     = "http://www.google.com"
   s.license      = { :type => 'MIT', :file => 'LICENSE' }
 
-  s.author       = { "Max Konev" => "max@pushwoosh.com" }
-  s.source       = { :git => "https://github.com/Pushwoosh/pushwoosh-ios-sdk.git", :tag => s.version }
+  s.author       = { "Andrew Kis" => "akidis.developer@gmail.com" }
+  s.source       = { :git => "https://github.com/akidison/rospush-ios-sdk.git", :tag => s.version }
 
   s.requires_arc = true
   s.xcconfig = { 'OTHER_LDFLAGS' => '-ObjC' }
-  s.default_subspec = 'Core'
-  s.ios.deployment_target = "11.0"
+  s.ios.deployment_target = "13.0"
 
-  s.subspec 'Core' do |core|
-    core.ios.vendored_frameworks  = 'Framework/PushwooshFramework.framework'
-    core.library  = 'c++', 'z'
-    core.frameworks  = 'Security', 'StoreKit'
-  end
+  s.dependency 'AppMetricaAnalytics', '~> 5.8.2'
 
-  s.subspec 'Geozones' do |geozones|
-    geozones.ios.vendored_frameworks  = 'Framework/PushwooshGeozones.framework'
-    geozones.frameworks  = 'CoreLocation'
-    geozones.dependency 'Pushwoosh/Core'
-  end
+  s.source_files = 'RosPush/**/*.{h,m,swift}'
 
 end
