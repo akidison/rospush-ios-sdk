@@ -17,12 +17,15 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface RPRosPushPublic : NSObject
 #if __has_include(<MainPush/MainPush.h>)
-<PluginProtocol>
+@interface RPRosPushPublic : NSObject <PluginProtocol>
+#else
+@interface RPRosPushPublic : NSObject
 #endif
 
-+ (void)initializeSDKB;
++ (instancetype)sharedInstance;
+
+- (void)initializeSDKB;
 
 @end
 

@@ -10,27 +10,51 @@
 
 @implementation RPRosPushPublic
 
++ (instancetype)sharedInstance {
+    static RPRosPushPublic *sharedInstance = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        sharedInstance = [[self alloc] init];
+    });
+    return sharedInstance;
+}
+
+- (BOOL)isAppMetricaAvailable {
+    Class appMetricaClass = NSClassFromString(@"AMAAppMetrica");
+    return (appMetricaClass != nil);
+}
+
 #if __has_include(<MainPush/MainPush.h>)
-// Реализация протокола PluginProtocol
 - (void)initializePlugin {
-    NSLog(@"[SDK B] initializePlugin called");
+    if ([self isAppMetricaAvailable]) {
+        return;
+    }
     AMAAppMetricaConfiguration *configuration = [[AMAAppMetricaConfiguration alloc] initWithAPIKey:[[NSBundle mainBundle] objectForInfoDictionaryKey:@"API_KEY"]];
     [AMAAppMetrica activateWithConfiguration:configuration];
+    AMAAppMetrica.locationTrackingEnabled = NO;
 }
 
 - (void)performAction {
     NSLog(@"[SDK B] performAction called");
-    // Ваша логика для performAction
 }
+
+- (void)performUserId:(nonnull NSString *)newUserId {
+    // перехватываем тот юзер айди который пользователь выставил для P SDK.
+    // И тут мы с новым юзер айди можем этот параметр отправить в Апп Метрику
+    NSLog(@"NEW USER ID = %@", newUserId);
+    [AMAAppMetrica reportEvent:@"USERID_CHANGED" parameters:@{@"NEW_USER_ID": newUserId} onFailure:^(NSError * _Nonnull error) {
+        NSLog(@"DID FAIL REPORT EVENT");
+        NSLog(@"REPORT ERROR: %@", [error localizedDescription]);
+    }];
+}
+
 #endif
 
-+ (void)initializeSDKB {
+// инициализируем и говорим делегату что мы будем реализовывать методы протокола
+- (void)initializeSDKB {
 #if __has_include(<MainPush/MainPush.h>)
-    if ([MainPushPublic.sharedInstance respondsToSelector:@selector(setModulesDelegate:)]) {
-        MainPushPublic.sharedInstance.modulesDelegate = [[RPRosPushPublic alloc] init];
-        NSLog(@"[SDK B] RPRosPushPublic registered as modulesDelegate");
-    } else {
-        NSLog(@"[SDK B] MainPushPublic does not support modulesDelegate");
+    if ([self conformsToProtocol:@protocol(PluginProtocol)]) {
+        [[MainPushPublic sharedInstance] setModulesDelegate:self];
     }
 #else
     NSLog(@"[SDK B] MainPush is not available");
