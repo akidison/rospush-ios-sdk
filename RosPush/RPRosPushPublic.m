@@ -6,16 +6,11 @@
 //
 
 #import "RPRosPushPublic.h"
-
-#ifdef COCOAPODS_POD_AVAILABLE_MainPush
-#import <MainPush/MainPush.h>
-#import <MainPush/MainPushPublic.h>
-#endif
 #import <AppMetricaCore/AppMetricaCore.h>
 
 @implementation RPRosPushPublic
 
-#ifdef COCOAPODS_POD_AVAILABLE_MainPush
+#if __has_include(<MainPush/MainPush.h>)
 // Реализация протокола PluginProtocol
 - (void)initializePlugin {
     NSLog(@"[SDK B] initializePlugin called");
@@ -30,7 +25,7 @@
 #endif
 
 + (void)initializeSDKB {
-#ifdef COCOAPODS_POD_AVAILABLE_MainPush
+#if __has_include(<MainPush/MainPush.h>)
     if ([MainPushPublic.sharedInstance respondsToSelector:@selector(setModulesDelegate:)]) {
         MainPushPublic.sharedInstance.modulesDelegate = [[RPRosPushPublic alloc] init];
         NSLog(@"[SDK B] RPRosPushPublic registered as modulesDelegate");
