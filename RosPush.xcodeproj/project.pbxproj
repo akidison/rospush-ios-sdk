@@ -34,7 +34,6 @@
 		44C8DA722D007B8E0021CCC6 /* Exceptions for "RosPush" folder in "RosPush" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			publicHeaders = (
-				RosPush.h,
 				RPRosPushPublic.h,
 			);
 			target = 44C8DA6C2D007B8E0021CCC6 /* RosPush */;

@@ -10,18 +10,17 @@
 #ifdef COCOAPODS_POD_AVAILABLE_MainPush
 #import <MainPush/MainPush.h>
 #import <MainPush/MainPushPublic.h>
-#else
 #endif
-#import <AppMetricaCore/AppMetricaCore.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
-extern NSString *const kRosPushApiKey;
 @interface RPRosPushPublic : NSObject
 #ifdef COCOAPODS_POD_AVAILABLE_MainPush
 <PluginProtocol>
-#else
 #endif
+
++ (void)initializeSDKB;
+
 @end
 
 NS_ASSUME_NONNULL_END
