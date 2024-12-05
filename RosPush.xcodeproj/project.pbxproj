@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4CCFCB1C39CE123B3CBF7ED8 /* Pods_RosPush.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84C49E3812C7C307974F16F9 /* Pods_RosPush.framework */; };
+		FBC6B8234781A6995340A88D /* Pods_RosPush.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C59FD72860B89BE7C68522B1 /* Pods_RosPush.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -24,10 +24,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		38F31CA1B742896A578576FB /* Pods-RosPush.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RosPush.debug.xcconfig"; path = "Target Support Files/Pods-RosPush/Pods-RosPush.debug.xcconfig"; sourceTree = "<group>"; };
 		44C8DA6D2D007B8E0021CCC6 /* RosPush.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RosPush.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		5E59A53F2B66DD7D07A90EAF /* Pods-RosPush.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RosPush.release.xcconfig"; path = "Target Support Files/Pods-RosPush/Pods-RosPush.release.xcconfig"; sourceTree = "<group>"; };
-		5FCA8DAFB948F7857F224849 /* Pods-RosPush.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RosPush.debug.xcconfig"; path = "Target Support Files/Pods-RosPush/Pods-RosPush.debug.xcconfig"; sourceTree = "<group>"; };
-		84C49E3812C7C307974F16F9 /* Pods_RosPush.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RosPush.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		565A3EC86FF382F7CA790012 /* Pods-RosPush.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RosPush.release.xcconfig"; path = "Target Support Files/Pods-RosPush/Pods-RosPush.release.xcconfig"; sourceTree = "<group>"; };
+		C59FD72860B89BE7C68522B1 /* Pods_RosPush.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RosPush.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -57,7 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4CCFCB1C39CE123B3CBF7ED8 /* Pods_RosPush.framework in Frameworks */,
+				FBC6B8234781A6995340A88D /* Pods_RosPush.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,7 +70,7 @@
 				44C8DA6F2D007B8E0021CCC6 /* RosPush */,
 				44C8DA6E2D007B8E0021CCC6 /* Products */,
 				594C2E4C8FBA21D41969DFDC /* Pods */,
-				D4668B4642B46A4280897D39 /* Frameworks */,
+				DFC7BC86F54919D3AA8326CB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -85,16 +85,16 @@
 		594C2E4C8FBA21D41969DFDC /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				5FCA8DAFB948F7857F224849 /* Pods-RosPush.debug.xcconfig */,
-				5E59A53F2B66DD7D07A90EAF /* Pods-RosPush.release.xcconfig */,
+				38F31CA1B742896A578576FB /* Pods-RosPush.debug.xcconfig */,
+				565A3EC86FF382F7CA790012 /* Pods-RosPush.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		D4668B4642B46A4280897D39 /* Frameworks */ = {
+		DFC7BC86F54919D3AA8326CB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				84C49E3812C7C307974F16F9 /* Pods_RosPush.framework */,
+				C59FD72860B89BE7C68522B1 /* Pods_RosPush.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -116,7 +116,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 44C8DA732D007B8E0021CCC6 /* Build configuration list for PBXNativeTarget "RosPush" */;
 			buildPhases = (
-				544C77ACBAA7CDBDD094C732 /* [CP] Check Pods Manifest.lock */,
+				4E3D2AA8C31D2EB94AD04149 /* [CP] Check Pods Manifest.lock */,
 				44C8DA682D007B8E0021CCC6 /* Headers */,
 				44C8DA692D007B8E0021CCC6 /* Sources */,
 				44C8DA6A2D007B8E0021CCC6 /* Frameworks */,
@@ -179,7 +179,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		544C77ACBAA7CDBDD094C732 /* [CP] Check Pods Manifest.lock */ = {
+		4E3D2AA8C31D2EB94AD04149 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -216,7 +216,7 @@
 /* Begin XCBuildConfiguration section */
 		44C8DA742D007B8E0021CCC6 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5FCA8DAFB948F7857F224849 /* Pods-RosPush.debug.xcconfig */;
+			baseConfigurationReference = 38F31CA1B742896A578576FB /* Pods-RosPush.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -253,7 +253,7 @@
 		};
 		44C8DA752D007B8E0021CCC6 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5E59A53F2B66DD7D07A90EAF /* Pods-RosPush.release.xcconfig */;
+			baseConfigurationReference = 565A3EC86FF382F7CA790012 /* Pods-RosPush.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;

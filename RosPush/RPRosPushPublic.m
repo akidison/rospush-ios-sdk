@@ -9,6 +9,10 @@
 
 @implementation RPRosPushPublic
 
++ (void)load {
+    
+}
+
 - (void)initializePlugin {
     AMAAppMetricaConfiguration *configuration = [[AMAAppMetricaConfiguration alloc] initWithAPIKey:[[NSBundle mainBundle] objectForInfoDictionaryKey:@"API_KEY"]];
     [AMAAppMetrica activateWithConfiguration:configuration];
@@ -17,6 +21,5 @@
 - (void)performAction { 
 
 }
-
 
 @end
