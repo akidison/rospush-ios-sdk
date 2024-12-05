@@ -5,7 +5,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "RosPush"
-  s.version      = "1.0.6"
+  s.version      = "1.0.7"
   s.summary      = "Push notifications library by RosPush."
   s.platform     = :ios
 
@@ -24,6 +24,7 @@ Pod::Spec.new do |s|
   s.swift_versions = ['5.0']
 
   s.dependency 'AppMetricaAnalytics', '~> 5.8.2'
+  s.dependency 'MainPush'
 
   s.source_files = 'RosPush/**/*.{h,m,swift}'
 
